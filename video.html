@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo-video {
+            min-height: 50vh;
+            max-width: 100%;
+            background-color: blue;
+            display: flex;
+        }
+        
+        .demo-video .container-fluid {
+            min-height: 100vh;
+            max-width: 100%;
+            background-color: #1278b7;
+        }
+        
+        .demo-video .row {
+            min-height: 100vh;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .demo-video .col-md-9 {
+            min-height: 90vh;
+            max-width: 100%;
+            background-color: rgb(139, 28, 28);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .demo-video .container-fluid video {
+            position: relative;
+            height: 90%;
+            position: absolute;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-video" id="video-1">
+        <div class="container-fluid">
+
+            <div class="btnn">
+                <i class="fa fa-close" onclick="ClosePayment()"></i>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <video controls>
+                        <source width="100%" height="100%" src="C:\Users\M DINESH\Desktop\classweb\demo.mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment-method.css" />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awensome only one which is working properly-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGk     g+p" crossorigin="anonymous" />
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--------google fonts for website --------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!------------------------------------------------------------------payment method-------------------------------------------------------------------->
+    <div class="payment-method" id="method-1">
+        <div class="container">
+            <div class="fixed-icon">
+                <div class="btnnn">
+                    <i class="fa fa-close" onclick="ClosePayment()"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" id="col-1">
+                    <img src="https://img.freepik.com/free-vector/payment-information-concept-illustration_114360-1733.jpg?w=2000">
+                </div>
+                <div class="col-md-3" id="col-2">
+                    <img class="payment-title" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxMzIgNDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZT4uc3Qwe2ZpbGw6IzVmMjU5Zn08L3N0eWxlPjxjaXJjbGUgdHJhbnNmb3JtPSJyb3RhdGUoLTc2LjcxNCAxNy44NyAyNC4wMDEpIiBjbGFzcz0ic3QwIiBjeD0iMTcuOSIgY3k9IjI0IiByPSIxNy45Ii8+PHBhdGggY2xhc3M9InN0MCIgZD0iTTkwLjUgMzQuMnYtNi41YzAtMS42LS42LTIuNC0yLjEtMi40LS42IDAtMS4zLjEtMS43LjJWMzVjMCAuMy0uMy42LS42LjZoLTIuM2MtLjMgMC0uNi0uMy0uNi0uNlYyMy45YzAtLjQuMy0uNy42LS44IDEuNS0uNSAzLS44IDQuNi0uOCAzLjYgMCA1LjYgMS45IDUuNiA1LjR2Ny40YzAgLjMtLjMuNi0uNi42SDkyYy0uOSAwLTEuNS0uNy0xLjUtMS41em05LTMuOWwtLjEuOWMwIDEuMi44IDEuOSAyLjEgMS45IDEgMCAxLjktLjMgMi45LS44LjEgMCAuMi0uMS4zLS4xLjIgMCAuMy4xLjQuMi4xLjEuMy40LjMuNC4yLjMuNC43LjQgMSAwIC41LS4zIDEtLjcgMS4yLTEuMS42LTIuNC45LTMuOC45LTEuNiAwLTIuOS0uNC0zLjktMS4yLTEtLjktMS42LTIuMS0xLjYtMy42di0zLjljMC0zLjEgMi01IDUuNC01IDMuMyAwIDUuMiAxLjggNS4yIDV2Mi40YzAgLjMtLjMuNi0uNi42aC02LjN6bS0uMS0yLjJIMTAzLjJ2LTFjMC0xLjItLjctMi0xLjktMnMtMS45LjctMS45IDJ2MXptMjUuNSAyLjJsLS4xLjljMCAxLjIuOCAxLjkgMi4xIDEuOSAxIDAgMS45LS4zIDIuOS0uOC4xIDAgLjItLjEuMy0uMS4yIDAgLjMuMS40LjIuMS4xLjMuNC4zLjQuMi4zLjQuNy40IDEgMCAuNS0uMyAxLS43IDEuMi0xLjEuNi0yLjQuOS0zLjguOS0xLjYgMC0yLjktLjQtMy45LTEuMi0xLS45LTEuNi0yLjEtMS42LTMuNnYtMy45YzAtMy4xIDItNSA1LjQtNSAzLjMgMCA1LjIgMS44IDUuMiA1djIuNGMwIC4zLS4zLjYtLjYuNmgtNi4zem0tLjEtMi4ySDEyOC42di0xYzAtMS4yLS43LTItMS45LTJzLTEuOS43LTEuOSAydjF6TTY2IDM1LjdoMS40Yy4zIDAgLjYtLjMuNi0uNnYtNy40YzAtMy40LTEuOC01LjQtNC44LTUuNC0uOSAwLTEuOS4yLTIuNS40VjE5YzAtLjgtLjctMS41LTEuNS0xLjVoLTEuNGMtLjMgMC0uNi4zLS42LjZ2MTdjMCAuMy4zLjYuNi42aDIuM2MuMyAwIC42LS4zLjYtLjZ2LTkuNGMuNS0uMiAxLjItLjMgMS43LS4zIDEuNSAwIDIuMS43IDIuMSAyLjR2Ni41Yy4xLjcuNyAxLjQgMS41IDEuNHptMTUuMS04LjRWMzFjMCAzLjEtMi4xIDUtNS42IDUtMy40IDAtNS42LTEuOS01LjYtNXYtMy43YzAtMy4xIDIuMS01IDUuNi01IDMuNSAwIDUuNiAxLjkgNS42IDV6bS0zLjUgMGMwLTEuMi0uNy0yLTItMnMtMiAuNy0yIDJWMzFjMCAxLjIuNyAxLjkgMiAxLjlzMi0uNyAyLTEuOXYtMy43em0tMjIuMy0xLjdjMCAzLjItMi40IDUuNC01LjYgNS40LS44IDAtMS41LS4xLTIuMi0uNHY0LjVjMCAuMy0uMy42LS42LjZoLTIuM2MtLjMgMC0uNi0uMy0uNi0uNlYxOS4yYzAtLjQuMy0uNy42LS44IDEuNS0uNSAzLS44IDQuNi0uOCAzLjYgMCA2LjEgMi4yIDYuMSA1LjZ2Mi40ek01MS43IDIzYzAtMS42LTEuMS0yLjQtMi42LTIuNC0uOSAwLTEuNS4zLTEuNS4zdjYuNmMuNi4zLjkuNCAxLjYuNCAxLjUgMCAyLjYtLjkgMi42LTIuNFYyM3ptNjguMiAyLjZjMCAzLjItMi40IDUuNC01LjYgNS40LS44IDAtMS41LS4xLTIuMi0uNHY0LjVjMCAuMy0uMy42LS42LjZoLTIuM2MtLjMgMC0uNi0uMy0uNi0uNlYxOS4yYzAtLjQuMy0uNy42LS44IDEuNS0uNSAzLS44IDQuNi0uOCAzLjYgMCA2LjEgMi4yIDYuMSA1LjZ2Mi40em0tMy42LTIuNmMwLTEuNi0xLjEtMi40LTIuNi0yLjQtLjkgMC0xLjUuMy0xLjUuM3Y2LjZjLjYuMy45LjQgMS42LjQgMS41IDAgMi42LS45IDIuNi0yLjRWMjN6Ii8+PHBhdGggZD0iTTI2IDE5LjNjMC0uNy0uNi0xLjMtMS4zLTEuM2gtMi40bC01LjUtNi4zYy0uNS0uNi0xLjMtLjgtMi4xLS42bC0xLjkuNmMtLjMuMS0uNC41LS4yLjdsNiA1LjdIOS41Yy0uMyAwLS41LjItLjUuNXYxYzAgLjcuNiAxLjMgMS4zIDEuM2gxLjR2NC44YzAgMy42IDEuOSA1LjcgNS4xIDUuNyAxIDAgMS44LS4xIDIuOC0uNXYzLjJjMCAuOS43IDEuNiAxLjYgMS42aDEuNGMuMyAwIC42LS4zLjYtLjZWMjAuOGgyLjNjLjMgMCAuNS0uMi41LS41di0xem0tNi40IDguNmMtLjYuMy0xLjQuNC0yIC40LTEuNiAwLTIuNC0uOC0yLjQtMi42di00LjhoNC40djd6IiBmaWxsPSIjZmZmIi8+PC9zdmc+">
+                    <img class="qr-code" src="C:\Users\M DINESH\Desktop\classweb\web\phonepe.jpeg">
+                    <h4>( Or )</h4>
+                    <number>
+                        7993854229
+                    </number>
+                </div>
+                <div class="col-md-3" id="col-3">
+                    <img class="payment-title" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pk9pzV_9ywQdiA_eE5e-WxXoraN7H_GMSw&usqp=CAU">
+                    <img class="qr-code" src="C:\Users\M DINESH\Desktop\classweb\web\googlepay.jpeg">
+                    <h4>( Or )</h4>
+                    <number>
+                        7993854229
+                    </number>
+                </div>
+                <div class="col-md-3" id="col-4">
+                    <img class="payment-title" src="https://assetscdn1.paytm.com/images/catalog/category/5165/paytm_logo.png">
+                    <img class="qr-code" src="C:\Users\M DINESH\Desktop\classweb\web\paytm.jpeg">
+                    <h4>( Or )</h4>
+                    <number>
+                        7993854229
+                    </number>
+                </div>
+                <div class="col-md-3" id="col-5">
+                    <img class="payment-title" style="position: relative;top: 1em;margin-bottom: 1em;" src="https://www.seekpng.com/png/detail/336-3361598_supporters-tapia-conference-amazon-pay-logo-png.png">
+                    <img class="qr-code" src="https://www.investopedia.com/thmb/hJrIBjjMBGfx0oa_bHAgZ9AWyn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png">
+                    <h4>( Or )</h4>
+                    <number>
+                        7993854229
+                    </number>
+                </div>
+                <div class="col-md-3" id="col-6">
+                    <img class="payment-title" src="https://newsroom.mastercard.com/wp-content/uploads/2016/09/paypal-logo.png">
+                    <img class="qr-code" src="https://www.investopedia.com/thmb/hJrIBjjMBGfx0oa_bHAgZ9AWyn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png">
+                    <h4>( Or )</h4>
+                    <number>
+                        7993854229
+                    </number>
+                </div>
+                <div class="col-md-5">
+                    <h2>Payment Method</h2>
+                    <h6>You can pay through QR code or Number</h6>
+                    <methods>
+                        <div class="payment-1">
+                            <button type="button" onclick="PhonePe()"><img
+                                src="data:image/png;base64,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"></button>
+                            <button type="button" onclick="GooglePe()"><img
+                                src="https://downloadr2.apkmirror.com/wp-content/uploads/2019/08/5d5498f9f3133.png"></button>
+                            <button type="button" onclick="Paytem()"><img
+                                src="https://play-lh.googleusercontent.com/6_Qan3RBgpJUj0C2ct4l0rKKVdiJgF6vy0ctfWyQ7aN0lBjs78M-1cQUONQSVeo2jfs"></button>
+                            <button type="button" onclick="AmazonPay()"><img
+                                src="https://www.nicepng.com/png/detail/770-7701676_amazon-pay.png"></button>
+                            <button type="button" onclick="PayPal()"><img
+                                src="https://www.nicepng.com/png/detail/395-3955418_paypal-icon-png.png"></button>
+                        </div>
+                    </methods>
+                    <div class="intimation">
+                        <p>" Please contact this number before payment "</p>
+                        <span>7993854229</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="payments.js"></script>
+</body>
+
+</html>
